@@ -3,13 +3,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Cars</title>
+    <style>table th, table td {padding: 5px;}</style>
 </head>
 <body>
-<div>
-    <th:block th:each="msg : ${messages}">
-        <h1 th:text="${msg}"></h1>
-    </th:block>
-</div>
+<H1> Cars </H1>
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>model</th>
+        <th>series</th>
+    </tr>
+
+    <tr th:each="lst : ${list}">
+        <td th:utext="${lst.id}">id</td>
+        <td th:utext="${lst.model}">model</td>
+        <td th:utext="${lst.series}">series</td>
+    </tr>
+
+</table>
+
 </body>
 </html>
